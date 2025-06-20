@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cu_ur5e_description</name>
+  <version>0.0.0</version>
+  <description>The cu_ur5e_description package</description>
+  <maintainer email="migoerner@constructor.university">Michael Goerner</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>ur_description</exec_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="use_gui" default="false" />
+    <arg name="frequency" default="30.0" />
+
+    <include file="$(find cu_ur5e_description)/launch/upload_description.launch" />
+
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+        <param name="use_gui" value="$(arg use_gui)" />
+        <param name="publish_frequency" value="$(arg frequency)" />
+<rosparam>
+zeros:
+            arm_shoulder_pan_joint: 0.0
+            arm_shoulder_lift_joint: -1.57079632679
+            arm_elbow_joint: 0.0
+            arm_wrist_1_joint: -1.57079632679
+            arm_wrist_2_joint: 0.0
+            arm_wrist_3_joint: 0.0
+</rosparam>
+    </node>
+    
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" value="$(arg frequency)" />
+    </node>
+</launch>
