@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="rviz" default="true" />
+    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/simulation_jsp.rviz" />
+
+    <include file="$(find cu_ur5e_description)/launch/upload_description.launch" />
+    
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+
+    <include file="$(find ur_robot_driver)/launch/ur_control.launch">
+        <arg name="debug" value="false"/>
+        <arg name="use_tool_communication" value="false"/>
+        <arg name="controller_config_file" value="$(dirname)/../config/ros_controllers.yaml"/>
+        <arg name="robot_ip" value="192.168.0.2"/>
+        <arg name="kinematics_config" value="$(find cu_ur5e_description)/config/kinematics_parameters.yaml"/>
+        <arg name="tf_prefix" value="arm_"/>
+        <arg name="headless_mode" value="true"/>
+        <arg name="use_spline_interpolation" value="false"/>
+    </include>
+
+</launch>
