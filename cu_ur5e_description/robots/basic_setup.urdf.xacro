@@ -44,7 +44,7 @@
     <joint name="base_to_operator_table" type="fixed">
         <parent link="base"/>
         <child link="operator_table"/>
-        <origin xyz="0.0 ${-0.8-.65} 0.0" rpy="0 0 0"/>
+        <origin xyz="0.0 ${0.8+.65} 0.0" rpy="0 0 0"/>
     </joint>
 
     <xacro:property name="clearance_height" value="0.55"/>
