@@ -67,7 +67,7 @@
     <joint name="base_to_mount" type="fixed">
         <parent link="base"/>
         <child link="mount"/>
-        <origin xyz="0 0 0.0" rpy="0 0 0"/>
+        <origin xyz="0 0 0.0" rpy="0 0 ${tau/4}"/>
     </joint>
 
     <link name="control_box">

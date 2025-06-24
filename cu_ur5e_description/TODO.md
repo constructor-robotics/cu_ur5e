@@ -1,2 +1,1 @@
-- moveit config
 - register UR5

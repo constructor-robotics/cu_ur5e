@@ -7,5 +7,5 @@ moveit_setup_assistant_config:
     relative_path: config/cu_ur5e.srdf
   CONFIG:
     author_name: Michael Goerner
-    author_email: migoerner@constructor.university
-    generated_timestamp: 1750767400
+    author_email: migoerner@constructor.uni
+    generated_timestamp: 1750780924

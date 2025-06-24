@@ -10,7 +10,7 @@
     <param name="publish_frequency" value="$(arg frequency)" />
 <rosparam>
 zeros:
-            arm_shoulder_pan_joint: 0.0
+            arm_shoulder_pan_joint: -3.14159265359
             arm_shoulder_lift_joint: -1.57079632679
             arm_elbow_joint: 0.0
             arm_wrist_1_joint: -1.57079632679
@@ -25,5 +25,5 @@ zeros:
         <param name="publish_frequency" value="$(arg frequency)" />
     </node>
 
-    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/simulation_jsp.rviz" />
+    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 </launch>
