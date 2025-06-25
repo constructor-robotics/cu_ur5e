@@ -2,39 +2,24 @@
 
 # For beginners, we downscale velocity and acceleration limits.
 # You can always specify higher scaling factors (<= 1.0) in your motion requests.  # Increase the values below to 1.0 to always move at maximum speed.
-default_velocity_scaling_factor: 0.1
-default_acceleration_scaling_factor: 0.1
+default_velocity_scaling_factor: 0.2
+default_acceleration_scaling_factor: 0.2
 
-# Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
-# Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
+# Joints limits
+#
+# arm_ prefixed version from _description/config/joint_limits.yaml
+# only required because acceleration limits are not specified in the URDF
+# position range and velocity limits could also be further reduced here
 joint_limits:
+  arm_shoulder_pan:
+    max_acceleration: !degrees 720.0
+  arm_shoulder_lift:
+    max_acceleration: !degrees 720.0
   arm_elbow_joint:
-    has_velocity_limits: true
-    max_velocity: 3.1415926535897931
-    has_acceleration_limits: false
-    max_acceleration: 0
-  arm_shoulder_lift_joint:
-    has_velocity_limits: true
-    max_velocity: 3.1415926535897931
-    has_acceleration_limits: false
-    max_acceleration: 0
-  arm_shoulder_pan_joint:
-    has_velocity_limits: true
-    max_velocity: 3.1415926535897931
-    has_acceleration_limits: false
-    max_acceleration: 0
-  arm_wrist_1_joint:
-    has_velocity_limits: true
-    max_velocity: 3.1415926535897931
-    has_acceleration_limits: false
-    max_acceleration: 0
-  arm_wrist_2_joint:
-    has_velocity_limits: true
-    max_velocity: 3.1415926535897931
-    has_acceleration_limits: false
-    max_acceleration: 0
-  arm_wrist_3_joint:
-    has_velocity_limits: true
-    max_velocity: 3.1415926535897931
-    has_acceleration_limits: false
-    max_acceleration: 0
+    max_acceleration: !degrees 720.0
+  arm_wrist_1:
+    max_acceleration: !degrees 720.0
+  arm_wrist_2:
+    max_acceleration: !degrees 720.0
+  arm_wrist_3:
+    max_acceleration: !degrees 720.0

@@ -18,4 +18,5 @@
         <arg name="use_spline_interpolation" value="false"/>
     </include>
 
+    <include file="$(find cu_ur5e_moveit_config)/launch/move_group.launch" />
 </launch>

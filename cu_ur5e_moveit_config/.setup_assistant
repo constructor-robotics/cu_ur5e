@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: Michael Goerner
     author_email: migoerner@constructor.uni
-    generated_timestamp: 1750780924
+    generated_timestamp: 1750840208

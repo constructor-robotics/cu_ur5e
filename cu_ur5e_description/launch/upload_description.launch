@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <launch>
     <param name="robot_description" command="xacro $(dirname)/../robots/basic_setup.urdf.xacro" />
+
+    <rosparam command="load" file="$(find cu_ur5e_description)/config/joint_limits.yaml" />
 </launch>
