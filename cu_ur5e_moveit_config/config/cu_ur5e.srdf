@@ -12,6 +12,9 @@
     <group name="arm">
         <chain base_link="arm_base_link" tip_link="arm_tool0"/>
     </group>
+    <group name="arm_local">
+        <chain base_link="arm_base_link" tip_link="arm_tool0"/>
+    </group>
     <group name="tool">
         <link name="arm_tool0"/>
     </group>
