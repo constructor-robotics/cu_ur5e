@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
+<!-- main launch file for the physical system -->
 <launch>
     <arg name="rviz" default="true" />
-    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 
     <include file="$(find cu_ur5e_description)/launch/upload_description.launch" />
-    
+
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
 
     <include file="$(find ur_robot_driver)/launch/ur_control.launch">
@@ -19,4 +19,6 @@
     </include>
 
     <include file="$(find cu_ur5e_moveit_config)/launch/move_group.launch" />
+
+    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 </launch>

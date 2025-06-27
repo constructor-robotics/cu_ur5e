@@ -1,10 +1,16 @@
 <?xml version="1.0"?>
+<!--
+MoveIt's default simulation mode
+
+This also utilizes the joint_state_publisher, but adds trajectory interpolation in MoveIt trajectories
+-->
 <launch>
-    <arg name="use_rviz" default="true" />
+    <arg name="rviz" default="true" />
 
     <include file="$(find cu_ur5e_moveit_config)/launch/demo.launch">
         <arg name="use_gui" value="false" />
         <arg name="use_rviz" value="false" />
     </include>
-    <node if="$(arg use_rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
+
+    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 </launch>
