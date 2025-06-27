@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="use_rviz" default="true" />
+
     <include file="$(find cu_ur5e_moveit_config)/launch/demo.launch">
         <arg name="use_gui" value="false" />
         <arg name="use_rviz" value="false" />
     </include>
-    <node pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
+    <node if="$(arg use_rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 </launch>
