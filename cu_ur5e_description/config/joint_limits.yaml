@@ -7,6 +7,10 @@
 #  - Support > Articles > UR articles > Max. joint torques
 #    https://www.universal-robots.com/articles/ur-articles/max-joint-torques
 #    retrieved: 2020-06-16, last modified: 2020-06-09
+#
+# Added additional (custom) acceleration limits here. They are not provided by UR,
+# but path time parameterization requires them.
+# -- v4hn@20250627
 joint_limits:
   shoulder_pan:
     has_position_limits: true

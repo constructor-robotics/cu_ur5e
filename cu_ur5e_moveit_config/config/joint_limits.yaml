@@ -7,19 +7,26 @@ default_acceleration_scaling_factor: 0.2
 
 # Joints limits
 #
-# arm_ prefixed version from _description/config/joint_limits.yaml
+# arm_*_joint version from _description/config/joint_limits.yaml adapted for MoveIt
 # only required because acceleration limits are not specified in the URDF
-# position range and velocity limits could also be further reduced here
+# joint range and velocity limits could also be further reduced here
+# The Pilz' planner can read additional jerk and deceleration limits from here as well
 joint_limits:
-  arm_shoulder_pan:
-    max_acceleration: !degrees 720.0
-  arm_shoulder_lift:
-    max_acceleration: !degrees 720.0
+  arm_shoulder_pan_joint:
+    has_acceleration_limits: true
+    max_acceleration: !degrees 360.0
+  arm_shoulder_lift_joint:
+    has_acceleration_limits: true
+    max_acceleration: !degrees 360.0
   arm_elbow_joint:
-    max_acceleration: !degrees 720.0
-  arm_wrist_1:
-    max_acceleration: !degrees 720.0
-  arm_wrist_2:
-    max_acceleration: !degrees 720.0
-  arm_wrist_3:
-    max_acceleration: !degrees 720.0
+    has_acceleration_limits: true
+    max_acceleration: !degrees 360.0
+  arm_wrist_1_joint:
+    has_acceleration_limits: true
+    max_acceleration: !degrees 360.0
+  arm_wrist_2_joint:
+    has_acceleration_limits: true
+    max_acceleration: !degrees 360.0
+  arm_wrist_3_joint:
+    has_acceleration_limits: true
+    max_acceleration: !degrees 360.0
