@@ -37,7 +37,7 @@
     <joint name="base_to_table" type="fixed">
         <parent link="base"/>
         <child link="table"/>
-        <origin xyz="${0.3+0.45} -0.11 0.0" rpy="0 0 0"/>
+        <origin xyz="${0.3+0.33} -0.11 0.0" rpy="0 0 0"/>
     </joint>
 
     <xacro:table length="0.8" width="1.6" height="0.72" name="operator_table" />
