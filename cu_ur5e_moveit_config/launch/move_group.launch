@@ -19,15 +19,14 @@
   <arg name="max_safe_path_cost" default="1"/>
   <arg name="publish_monitored_planning_scene" default="true"/>
 
-  <arg name="capabilities" default=""/>
+  <!-- <arg name="capabilities" default=""/> -->
   <arg name="disable_capabilities" default=""/>
   <!-- load these non-default MoveGroup capabilities (space seperated) -->
-  <!--
+
   <arg name="capabilities" value="
-                a_package/AwsomeMotionPlanningCapability
-                another_package/GraspPlanningPipeline
+                moveit_monitoring/Monitoring
+                move_group/OnlineCollisionPredictor
                 " />
-  -->
 
   <!-- inhibit these default MoveGroup capabilities (space seperated) -->
   <!--
