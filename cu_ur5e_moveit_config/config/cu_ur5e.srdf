@@ -51,6 +51,14 @@
         <joint name="arm_wrist_2_joint" value="1.57"/>
         <joint name="arm_wrist_3_joint" value="0"/>
     </group_state>
+        <group_state name="center_above_table" group="arm">
+        <joint name="arm_shoulder_pan_joint" value="-3.1055997053729456"/>
+        <joint name="arm_shoulder_lift_joint" value="-2.265897890130514"/>
+        <joint name="arm_elbow_joint" value="-1.7460432052612305"/>
+        <joint name="arm_wrist_1_joint" value="-0.7013392013362427"/>
+        <joint name="arm_wrist_2_joint" value="1.575131893157959"/>
+        <joint name="arm_wrist_3_joint" value="0.0"/>
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="tool" parent_link="arm_tool0" group="tool" parent_group="arm"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
