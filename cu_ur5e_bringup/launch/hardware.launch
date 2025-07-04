@@ -20,5 +20,7 @@
 
     <include file="$(find cu_ur5e_moveit_config)/launch/move_group.launch" />
 
+    <node name="moveit_by_name" pkg="moveit_by_name" type="moveit_by_name" />
+
     <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 </launch>
