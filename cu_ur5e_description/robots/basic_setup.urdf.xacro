@@ -32,12 +32,12 @@
         <origin xyz="-.5 0 0" rpy="0 0 0"/>
     </joint>
 
-    <xacro:table length="0.6" width="1." height="0.74" name="table" />
+    <xacro:table length="0.8" width="0.8" height="0.72" name="table" />
 
     <joint name="base_to_table" type="fixed">
         <parent link="base"/>
         <child link="table"/>
-        <origin xyz="${0.3+0.33} -0.11 0.0" rpy="0 0 0"/>
+        <origin xyz="${0.4+0.33} -0.11 0.0" rpy="0 0 0"/>
     </joint>
 
     <xacro:table length="0.8" width="1.6" height="0.72" name="operator_table" />
@@ -68,5 +68,28 @@
         <parent link="base"/>
         <child link="side_table"/>
         <origin xyz="0.0 ${0.4+0.45} 0.0" rpy="0 0 0"/>
+    </joint>
+
+    <xacro:property name="tripod_height" value="1.45"/>
+    <link name="tripod">
+        <visual>
+            <geometry>
+                <cylinder length="${tripod_height}" radius="0.15"/>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+            </geometry>
+            <material name="mount_gray" />
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${tripod_height}" radius="0.15"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <joint name="base_to_tripod" type="fixed">
+        <parent link="base"/>
+        <child link="tripod"/>
+        <origin xyz="-0.4 -0.5 ${tripod_height/2}" rpy="0 0 0"/>
     </joint>
 </robot>

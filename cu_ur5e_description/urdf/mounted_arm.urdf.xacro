@@ -70,7 +70,7 @@
         <origin xyz="0 0 0.0" rpy="0 0 ${tau/4}"/>
     </joint>
 
-    <link name="control_box">
+    <!-- <link name="control_box">
         <visual>
             <geometry>
                 <box size="0.32 0.6 0.5"/>
@@ -89,7 +89,7 @@
         <parent link="mount"/>
         <child link="control_box"/>
         <origin xyz="-0.3 0.0 0.5" rpy="0 0 0"/>
-    </joint>
+    </joint> -->
 
     <link name="arm_flange_safety">
         <!-- https://forum.universal-robots.com/t/error-c403a0-danger-of-clamping-between-the-robot-lower-arm-and-tool/16142/2 -->
