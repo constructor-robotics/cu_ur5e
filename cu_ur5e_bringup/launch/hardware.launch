@@ -16,12 +16,21 @@
         <arg name="tf_prefix" value="arm_"/>
         <arg name="headless_mode" value="true"/>
         <arg name="use_spline_interpolation" value="false"/>
+        <arg name="controllers" value="joint_state_controller scaled_pos_joint_traj_controller force_torque_sensor_controller robot_status_controller" />
+        <arg name="stopped_controllers" value="twist_controller" />
     </include>
 
     <include file="$(find cu_ur5e_moveit_config)/launch/move_group.launch" />
 
     <node name="moveit_by_name" pkg="moveit_by_name" type="moveit_by_name" />
 
+    <!-- provide a "safe zone" for the optional UR Twist controller -->
+    <node name="zoned_twist_filter" pkg="cu_zoned_twist" type="zoned_twist_filter">
+        <param name="zoned_frame" value="table_top"/>
+<rosparam>
+zone_min: [-0.2, -0.3, 0.05]
+zone_max: [0.2, 0.3, 0.25]
+</rosparam>
     </node>
 
     <include file="$(dirname)/cam.launch" />
