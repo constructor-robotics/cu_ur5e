@@ -89,6 +89,5 @@
     <disable_collisions link1="mount" link2="wall" reason="Adjacent"/>
     <disable_collisions link1="operator_table" link2="table" reason="Adjacent"/>
     <disable_collisions link1="operator_table" link2="wall" reason="Adjacent"/>
-    <disable_collisions link1="table" link2="wall" reason="Adjacent"/>
-    <disable_collisions link1="table" link2="wall" reason="User"/>
+    <disable_collisions link1="tripod" link2="wall" reason="User"/>
 </robot>
