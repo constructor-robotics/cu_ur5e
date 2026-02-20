@@ -87,6 +87,7 @@
     <disable_collisions link1="mount" link2="operator_table" reason="Adjacent"/>
     <disable_collisions link1="mount" link2="table" reason="Adjacent"/>
     <disable_collisions link1="mount" link2="wall" reason="Adjacent"/>
+    <disable_collisions link1="operator_clearance" link2="operator_table" reason="Adjacent"/>
     <disable_collisions link1="operator_table" link2="table" reason="Adjacent"/>
     <disable_collisions link1="operator_table" link2="wall" reason="Adjacent"/>
     <disable_collisions link1="tripod" link2="wall" reason="User"/>
