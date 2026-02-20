@@ -56,6 +56,12 @@
             <origin xyz="0 0 0.0" rpy="0 0 0"/>
             <material name="clearance_volume"/>
         </visual>
+        <collision>
+            <geometry>
+                <box size="0.8 1.6 ${clearance_height}"/>
+            </geometry>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/>
+        </collision>
     </link>
     <joint name="operator_clearance_joint" type="fixed">
         <parent link="operator_table_top"/>
