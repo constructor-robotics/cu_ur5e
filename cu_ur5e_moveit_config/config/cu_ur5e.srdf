@@ -90,4 +90,6 @@
     <disable_collisions link1="operator_table" link2="table" reason="Adjacent"/>
     <disable_collisions link1="operator_table" link2="wall" reason="Adjacent"/>
     <disable_collisions link1="tripod" link2="wall" reason="User"/>
+    <disable_collisions link1="arm_ee_adapter" link2="arm_flange_safety" reason="Adjacent"/>
+    <disable_collisions link1="arm_ee_adapter" link2="arm_wrist_3_link" reason="Adjacent"/>
 </robot>
