@@ -93,4 +93,9 @@
     <disable_collisions link1="tripod" link2="wall" reason="User"/>
     <disable_collisions link1="arm_ee_adapter" link2="arm_flange_safety" reason="Adjacent"/>
     <disable_collisions link1="arm_ee_adapter" link2="arm_wrist_3_link" reason="Adjacent"/>
+    <disable_collisions link1="operator_clearance" link2="wall" reason="User"/>
+    <disable_collisions link1="side_table" link2="table" reason="User"/>
+    <disable_collisions link1="side_table" link2="wall" reason="User"/>
+    <disable_collisions link1="side_table" link2="wall_indent" reason="User"/>
+    <disable_collisions link1="wall" link2="wall_indent" reason="User"/>
 </robot>

@@ -11,19 +11,40 @@
         <color rgba="0.6 0.4 0.2 0.2"/>
     </material>
 
+    <link name="wall_indent">
+        <visual>
+            <geometry>
+                <box size="0.18 0.74 2.0"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="wall_gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.18 0.74 2.0"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+    <joint name="base_to_wall_indent" type="fixed">
+        <parent link="base"/>
+        <child link="wall_indent"/>
+        <origin xyz="-0.60 0.1 1" rpy="0 0 0"/>
+    </joint>
+
     <link name="wall">
         <visual>
             <geometry>
                 <box size="0.1 4.5 2.0"/>
             </geometry>
-            <origin xyz="0 0 1.0" rpy="0 0 0"/>
+            <origin xyz="-0.235 0 1.0" rpy="0 0 0"/>
             <material name="wall_gray"/>
         </visual>
         <collision>
             <geometry>
                 <box size="0.1 4.0 2.0"/>
             </geometry>
-            <origin xyz="0 0 1.0" rpy="0 0 0"/>
+            <origin xyz="-0.235 0 1.0" rpy="0 0 0"/>
         </collision>
     </link>
     <joint name="base_to_wall" type="fixed">
@@ -32,19 +53,19 @@
         <origin xyz="-.5 0 0" rpy="0 0 0"/>
     </joint>
 
-    <xacro:table length="0.8" width="0.8" height="0.72" name="table" />
+    <xacro:table length="0.8" width="1.6" height="0.72" name="table" />
 
     <joint name="base_to_table" type="fixed">
         <parent link="base"/>
         <child link="table"/>
-        <origin xyz="${0.4+0.33} -0.11 0.0" rpy="0 0 0"/>
+        <origin xyz="${0.4+0.11} -0.11 0.0" rpy="0 0 0"/>
     </joint>
 
     <xacro:table length="0.8" width="1.6" height="0.72" name="operator_table" />
     <joint name="base_to_operator_table" type="fixed">
         <parent link="base"/>
         <child link="operator_table"/>
-        <origin xyz="0.0 ${-0.8-.75} 0.0" rpy="0 0 0"/>
+        <origin xyz="-0.29 ${-0.8-.75} 0.0" rpy="0 0 0"/>
     </joint>
 
     <xacro:property name="clearance_height" value="0.55"/>
@@ -73,7 +94,7 @@
     <joint name="base_to_side_table" type="fixed">
         <parent link="base"/>
         <child link="side_table"/>
-        <origin xyz="0.0 ${0.4+0.45} 0.0" rpy="0 0 0"/>
+        <origin xyz="-0.29 ${0.4+0.45} 0.0" rpy="0 0 0"/>
     </joint>
 
     <xacro:property name="tripod_height" value="1.45"/>
