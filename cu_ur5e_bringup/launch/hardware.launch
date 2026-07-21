@@ -26,8 +26,9 @@
 
     <!-- provide a "safe zone" for the optional UR Twist controller -->
     <node name="zoned_twist_filter" pkg="cu_zoned_twist" type="zoned_twist_filter">
-        <param name="zoned_frame" value="table_top"/>
 <rosparam>
+zoned_link: "arm_tool0"
+zone_frame: "table_top"
 zone_min: [-0.2, -0.3, 0.05]
 zone_max: [0.2, 0.3, 0.25]
 </rosparam>
