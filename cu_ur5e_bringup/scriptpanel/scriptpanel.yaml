@@ -56,3 +56,8 @@ scripts:
       tooltip: |
         Switch to Trajectory Follower (default)
         Required to move from MoveIt
+    - label: Demo Videos
+      script: demo_videos.sh
+      group: D-demo
+      tooltip: |
+        Show robot-specific demo videos in fullscreen
