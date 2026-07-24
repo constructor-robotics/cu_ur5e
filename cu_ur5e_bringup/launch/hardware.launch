@@ -36,5 +36,7 @@ zone_max: [0.2, 0.3, 0.25]
 
     <include file="$(dirname)/cam.launch" />
 
+    <include file="$(find tts_piper)/launch/tts_standalone.launch" />
+
     <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(dirname)/../config/default.rviz" />
 </launch>
